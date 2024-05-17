@@ -115,7 +115,7 @@ def process_image4():
             img = Image.open(BytesIO(file.stream.read()))
             
             # Call the opti_con method using the instance
-            processed_image_path = SOIL.con_soil(r'C:\Users\91984\Downloads\CNN_API-X\SOIL_IMAGES')
+            processed_image_path = SOIL.con_soil('SOIL_IMAGES')
 
             # Return the processed image file
             return send_file(processed_image_path, mimetype='image/png', as_attachment=True)
